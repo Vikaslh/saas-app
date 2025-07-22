@@ -34,12 +34,14 @@ npm install
 Create a `.env.local` file in the `project` directory with the following (replace with your actual keys):
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_own key
-CLERK_SECRET_KEY=your_own key
-NEXT_PUBLIC_SUPABASE_URL=your_own key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_own_key
+CLERK_SECRET_KEY=your_own_key
+NEXT_PUBLIC_SUPABASE_URL=your_own_key
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_token
 ```
+
+> **Tip:** You can use `.env.example` as a template for your environment variables.
 
 ### 4. Run the development server
 
@@ -48,6 +50,26 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Production Deployment
+
+### Deploying to Vercel
+
+1. **Push your code to GitHub, GitLab, or Bitbucket.**
+2. **Create a new project on [Vercel](https://vercel.com/)** and import your repository.
+3. **Set environment variables** in the Vercel dashboard using the keys from `.env.example`.
+4. **Build and deploy:** Vercel will automatically install dependencies and run `next build`.
+5. **Static assets:** All icons and images are in the `public/` directory and will be served automatically.
+6. **Custom domains, analytics, and more** can be configured in the Vercel dashboard.
+
+### Best Practices
+- Do not commit your real `.env.local` file to version control.
+- Use the provided `.env.example` as a reference for required environment variables.
+- Ensure all static assets (icons, images) are present in `public/` before deploying.
+- For custom robots.txt or sitemap.xml, add them to the `public/` directory.
+- Review your `next.config.ts` for any production-specific settings.
 
 ---
 
@@ -104,12 +126,6 @@ project/
 - `npm run build` – Build for production
 - `npm run start` – Start the production server
 - `npm run lint` – Lint the codebase
-
----
-
-## Deployment
-
-You can deploy this app to [Vercel](https://vercel.com/) or any platform that supports Next.js App Router.
 
 ---
 
