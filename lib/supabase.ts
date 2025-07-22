@@ -1,5 +1,6 @@
 import {createClient} from "@supabase/supabase-js";
 import {auth} from "@clerk/nextjs/server";
+export const dynamic = 'force-dynamic';
 
 export const createSupabaseClient = () => {
     return createClient(

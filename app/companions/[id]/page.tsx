@@ -1,9 +1,11 @@
+export const dynamic = 'force-dynamic';
 import {getCompanion} from "@/lib/actions/companion.actions";
 import {currentUser} from "@clerk/nextjs/server";
 import {redirect} from "next/navigation";
 import {getSubjectColor} from "@/lib/utils";
 import Image from "next/image";
 import CompanionComponent from "@/components/CompanionComponent";
+
 
 interface CompanionSessionPageProps {
     params: Promise<{ id: string}>;

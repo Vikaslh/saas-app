@@ -1,9 +1,11 @@
 "use client";
+export const dynamic = 'force-dynamic';
 import { removeBookmark } from "@/lib/actions/companion.actions";
 import { addBookmark } from "@/lib/actions/companion.actions";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 
 interface CompanionCardProps {
   id: string;
